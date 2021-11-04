@@ -1,5 +1,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+const { arrayExpression } = require("@babel/types");
+
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
   "Banana Nut Fudge",
@@ -46,13 +48,9 @@ Use the copy function below to do the following:
 */
 
 function copy(array){
-  let originalCopy = []
-  for(let i = 0; i<32; i++){
-    return originalCopy[i] = originalFlavors[i];
-
-  }
+  return [...array];
 }    
-console.log(copy(originalFlavors[i])
+console.log('task1', copy(originalFlavors));
 
 
 
@@ -68,16 +66,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-// function is31Flavors(array){
-//  if(array.length === 31){
-//    return true;
-//      console.log('true');
-//  }else{
-//    return false;
-//      console.log('false');
-//  }
-// }
-// console.log(is31Flavors(originalFlavors))
+ function is31Flavors(array){
+  if(array.length === 31){
+    return true;
+    
+  }else{
+    return false;
+
+  }
+ }
+ console.log('task2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -92,10 +90,12 @@ Use the addFlavor function below to do the following:
 */
 
 // 2 paramas array and string which hold place for new flavor
-//function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+array.unshift(string);
+return array;
  //use unshift to add flavor to front of array
-//}
+}
+console.log('task3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -108,12 +108,13 @@ Use the removeLastFlavor function below to do the following:
 
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
+//use .pop()
+function removeLastFlavor(array){
+ array.pop();
+ return array;
 
-//function removeLastFlavor(/*your code here*/){
- /*your code here*/
- //use .push()
-//}
-
+}
+console.log('task4', removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -127,10 +128,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //2 para, an array and a num holding place for index
-//function getFlavorByIndex(array, index){
-  //return 
-//}
-//console.log(getFlavorByIndex(originalFlavors, [2]))
+function getFlavorByIndex(array, index){
+  return array.indexOf()
+}
+console.log(getFlavorByIndex(originalFlavors, [2]))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
