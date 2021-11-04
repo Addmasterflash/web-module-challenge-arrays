@@ -153,10 +153,23 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 //2 para and string we want to remove
-function removeFlavorByName(array, string){
+/*function removeFlavorByName(array, string){
   return array.splice(string); //lets hope that array.splice(string) works or i will cry uncontrollably  
 }
-console.log('task6', removeFlavorByName(originalFlavors, 'Rainbow Sherbert'));
+console.log('task6', removeFlavorByName(originalFlavors, 'Rainbow Sherbert'));*/
+//WELL I GUESS IT IS WRONGOOOOO
+
+function removeFlavorByName(array, flavor){
+for(let i =0; i < array.length; i++){
+  if(array[i] === flavor){
+    array.splice(i, 1);
+  }
+  return array;
+}
+}
+
+console.log('task6', removeFlavorByName(originalFlavors, 'Vanilla'));
+
 
 
 
@@ -310,7 +323,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-/*function foo(){
+function foo(){
   console.log('its working');
   return 'bar';
 }
@@ -324,7 +337,7 @@ module.exports = {
   removeFlavorByName,
   copy,
   filterByWord,
-  getAverageWordLength,
-  getRandomFlavors
-}*/
+  /*getAverageWordLength,
+  getRandomFlavors*/
+}
 
