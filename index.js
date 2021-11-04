@@ -128,10 +128,15 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //2 para, an array and a num holding place for index
-function getFlavorByIndex(array, index){
-  return array.indexOf()
+//stupid it said return a number duh
+function getFlavorByIndex(array, number){
+  return array[number];
+  //return array.indexOf()
+  //ig this isnt right, so the correct one would return the Number in the square brackets that are held by Array.
+  //makes sense but would have thought that indexOf() would do the same thing no?
 }
-console.log(getFlavorByIndex(originalFlavors, [2]))
+//i think im way over thinking each and every one of these and making them more complicated than the actual solution
+console.log(getFlavorByIndex(originalFlavors, 2)); //ig i didnt need to add the [] since its in the function huh.
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -148,9 +153,10 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 //2 para and string we want to remove
-//function removeFlavorByName(/*your code here*/){
-  /*your code here*/
-//}
+function removeFlavorByName(array, string){
+  return array.splice(string); //lets hope that array.splice(string) works or i will cry uncontrollably  
+}
+console.log('task6', removeFlavorByName(originalFlavors, 'Rainbow Sherbert'));
 
 
 
@@ -304,7 +310,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-function foo(){
+/*function foo(){
   console.log('its working');
   return 'bar';
 }
@@ -320,5 +326,5 @@ module.exports = {
   filterByWord,
   getAverageWordLength,
   getRandomFlavors
-}
+}*/
 
